@@ -1,3 +1,4 @@
+import { type } from '@testing-library/user-event/dist/type';
 import dataSeries from '../Api/seriesData.json';
 
 function Netflix(){
@@ -12,7 +13,7 @@ function Netflix(){
             </div>
             <h2>Name: {currEle.name}</h2>
             <h3>Rating: {currEle.rating}</h3>
-            <p>Summary: {currEle.summary}</p>
+            <p>Summary: {currEle.description}</p>
             <p>Genre: {currEle.genre}</p>
             <p>Cast: {currEle.cast}</p>
             <a href={currEle.watch_url} target='blank'>
