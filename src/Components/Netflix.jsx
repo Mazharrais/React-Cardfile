@@ -1,25 +1,15 @@
-import { type } from '@testing-library/user-event/dist/type';
+
 import dataSeries from '../Api/seriesData.json';
+import Cardfile from './Cardfile';
 
 function Netflix(){
     return(
         <>
+        <h1>NetFlix Top 10 Rating series...!</h1>
         <ul>
 {dataSeries.map((currEle)=>{
     return (
-        <li key={currEle.id}>
-            <div>
-                <img src={currEle.img_url} alt="qot.jpg" width='40%' height='40%' />
-            </div>
-            <h2>Name: {currEle.name}</h2>
-            <h3>Rating: {currEle.rating}</h3>
-            <p>Summary: {currEle.description}</p>
-            <p>Genre: {currEle.genre}</p>
-            <p>Cast: {currEle.cast}</p>
-            <a href={currEle.watch_url} target='blank'>
-                <button>Watch Now</button>
-            </a>
-        </li>
+        <Cardfile key={currEle.id} currEle={currEle} />
     )
 })
 
