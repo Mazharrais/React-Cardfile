@@ -3,6 +3,15 @@
 import React from 'react'
 
 function Cardfile({currEle}) {
+
+  const btn_style ={
+    padding : "1.2rem 2.4rem",
+    border : "none",
+    fontSize : "1.6rem",
+    backgroundColor : "var( --bnt-hover-bg-color)",
+    color : "var(--bg-color)",
+  }
+
   return (
     <li className='card'>
             <div>
@@ -16,7 +25,7 @@ function Cardfile({currEle}) {
             <p>Genre: {currEle.genre}</p>
             <p>Cast: {currEle.cast}</p>
             <a href={currEle.watch_url} target='blank'>
-                <button>Watch Now</button>
+                <button style={btn_style}>Watch Now</button>
             </a>
             </div>
         </li>
