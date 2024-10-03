@@ -4,7 +4,7 @@ import React from 'react'
 
 function Cardfile({currEle}) {
   return (
-    <li key={currEle.id}>
+    <li>
             <div>
                 <img src={currEle.img_url} alt="qot.jpg" width='40%' height='40%' />
             </div>

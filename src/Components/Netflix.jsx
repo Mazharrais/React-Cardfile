@@ -5,8 +5,8 @@ import Cardfile from './Cardfile';
 function Netflix(){
     return(
         <>
-        <h1>NetFlix Top 10 Rating series...!</h1>
-        <ul>
+       
+        <ul className='grid grid-three--cols'>
 {dataSeries.map((currEle)=>{
     return (
         <Cardfile key={currEle.id} currEle={currEle} />
