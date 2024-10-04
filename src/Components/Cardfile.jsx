@@ -8,9 +8,13 @@ function Cardfile({currEle}) {
     padding : "1.2rem 2.4rem",
     border : "none",
     fontSize : "1.6rem",
-    backgroundColor : "var( --bnt-hover-bg-color)",
-    color : "var(--bg-color)",
+    backgroundColor : `${currEle.rating >= 8.5 ? "#7dcea0" : "#f7dc6f"}`,
+    color : "var(--btn-color)",
+    fontWeight: 'bold',
+    cursor: 'pointer',
   }
+
+  const ratingClass = currEle.rating >= 8.5 ? "super_hit" : "average";
 
   return (
     <li className='card'>
@@ -20,7 +24,7 @@ function Cardfile({currEle}) {
             <div className='card-content'>
 
             <h2>Name: {currEle.name}</h2>
-            <h3>Rating: {currEle.rating}</h3>
+            <h3>Rating: <span className={`rating ${ratingClass}`}>{currEle.rating} </span></h3>
             <p>Summary: {currEle.description}</p>
             <p>Genre: {currEle.genre}</p>
             <p>Cast: {currEle.cast}</p>
