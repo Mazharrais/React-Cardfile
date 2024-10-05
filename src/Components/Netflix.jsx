@@ -14,8 +14,8 @@ function Netflix(){
         <>
         
         <Cardfile key={currEle.id} currEle={currEle} />
-         <Event />
-         <Eventprops />
+         {/* <Event />
+         <Eventprops /> */}
         </>
         
     )

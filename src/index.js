@@ -13,14 +13,14 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <UseState />
+    {/* <UseState />
     <UserState />
     <Derivedstate />
-    <LiftStateUp />
+    <LiftStateUp /> */}
+    {/* <br/>
     <br/>
     <br/>
-    <br/>
-    <Counter />
+    <Counter /> */}
   </React.StrictMode>
 );
 
